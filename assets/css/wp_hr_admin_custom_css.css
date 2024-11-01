@@ -1,0 +1,650 @@
+.hide {
+    display: none;
+}
+/*Absolute Center Spinner */
+.loading {
+    position: fixed;
+    z-index: 99999999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+
+    background: -webkit-radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+    /* hide "loading..." text */
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.loading:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 1500ms infinite linear;
+    -moz-animation: spinner 1500ms infinite linear;
+    -ms-animation: spinner 1500ms infinite linear;
+    -o-animation: spinner 1500ms infinite linear;
+    animation: spinner 1500ms infinite linear;
+    border-radius: 0.5em;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+    box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+body.post-type-review_management div#advanced-sortables {
+    display:  none !important;
+}
+body.post-type-review_management #normal-sortables div.postbox {
+    display: none !important;
+}
+
+body.post-type-review_management #normal-sortables div#send_replay_email_meta_box, body.post-type-review_management #normal-sortables div#email_meta_box {
+    display: block !important;
+}
+.wphrgdpr_editor_selection, .wphrgdpr_chk_selection{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.chk_textbox{
+    padding: 3px 8px;
+    
+    font-size: 18px;
+    line-height: 100%;
+    height: 40px;
+    width: 92%;
+    outline: 0;
+    margin: 0 0 3px;
+    background-color: #fff;
+}
+.wphrgdpr_close{
+    width: 5%;
+    padding: 3px 8px;
+    font-size: 1.7em;
+    line-height: 100%;
+    height: 1.7em;
+}
+.single_model_answer{
+    width: 100%;
+}
+input.chk_textbox::placeholder {font-size:  14px;top: -3px;position: relative;}
+input.chk_textbox.input-text{
+        margin-bottom: 15px;
+}
+.wphrgdpr_consent_form_txtarea{
+    width: 95%;
+}
+label.wphrgdpr_close_consent {
+    position:  absolute;
+    margin-left:  10px;
+    font-size:  17px;
+    font-weight:  600;
+}
+
+.postbox.wphrgdpr_support_forthDiv ul{
+    padding-left: 30px;
+    list-style-type: disc !important;
+}
+.wphrgdpr_support_firstDiv ul{
+    padding-left: 30px;
+    list-style-type: decimal !important;
+}
+.single_label
+{
+    display: block;
+    padding-top: 5px;
+}
+
+.support_page .big-container{
+	width:64%;
+	margin-left:0;
+	margin-right:0.5%;
+}
+.support_page .small-container{
+	width:35%;
+	margin-right:0;
+	margin-left:0.5%;
+}
+
+.support_page .meta-box-sortables {
+    min-height: 100px;
+}
+.support_page .text-center{
+	text-align: center;
+	margin:0 auto;
+}
+.support_page .postbox .inside {
+    margin-bottom: 0;
+}
+.support_page .paypal_form{
+	margin-top:15px;
+}
+.support_sec a i{
+	font-size: 46px;
+    margin: 0 10px 10px 0;
+    display: inline-block;
+    vertical-align: middle;	
+}
+.support_sec a{
+	text-decoration:none;
+}
+.half-container-1 {
+    width: 69.5%;
+    display: inline-block;
+    vertical-align: top;
+}
+.half-container-2 {
+    width: 29.5%;
+    display: inline-block;
+	vertical-align: top;
+}
+.half-container-3 {
+    width: 88.5%;
+    display: inline-block;
+	vertical-align: top;
+}
+.half-container-4 {
+    width: 10.5%;
+    display: inline-block;
+	vertical-align: top;
+}
+.feed-orange i{
+	font-size:30px;
+	color:#fff;
+	background-color: #F79939;
+	border-radius:7px;
+	padding:3px 5px;
+}
+.half-container-2 img {
+    max-width: 100%;
+    width:auto;
+    height:170px;
+}
+.text-right {
+    text-align: right;
+}
+.green{
+	color:#B7D436;
+}
+.support-input{
+	background-color: #ddd !important;
+    color: #000 !important;
+    padding: 7px !IMPORTANT;
+    width: 85%;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.greenbtn{
+	margin:15px 0 auto !important;
+	background: #009301 !important;
+    border-color: #026302 #037704 #037704 !important;
+    -webkit-box-shadow: 0 1px 0 #037704 !important;
+    box-shadow: 0 1px 0 #037704 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    text-shadow: 0 -1px 1px #037704, 1px 0 1px #037704, 0 1px 1px #037704, -1px 0 1px #037704 !important;
+	font-size:16px !important;
+}
+.margin-cls{
+	margin:15px auto !important; 
+}
+.medium-font{
+	font-size:16px;
+}
+.link1{
+	background: #bbb;
+    width: 100%;
+    padding: 15px;
+    display: inline-block;
+    vertical-align: top;
+    font-size:16px;
+    text-decoration:none;
+    margin-bottom:10px;
+}
+.link2{
+	background: #ea7070;
+    width: 100%;
+    padding: 15px;
+    display: inline-block;
+    vertical-align: top;
+    font-size:16px;
+    text-decoration:none;
+}
+.red{
+	color:#b50404;
+}
+.white{
+	color:#fff;
+	font-size:14px;
+}
+.small-img img{
+	height:70px;
+}
+.announcements_sec{
+	list-style:disc;
+	padding-left:15px;
+}
+.support_page .postbox .handlediv::before{
+	display:none !important;
+}
+.wphr-addon {
+    text-align: center;
+}
+.wphr-addon-thumb {
+    padding: 50px 15px;
+    background: #e1e1e1;
+}
+.wphr-addon-thumb i {
+    font-size: 26px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+.wphr-addon-thumb a {
+    font-size: 22px;
+    text-decoration: none;
+}
+li#toplevel_page_wphrgdpr li.wp-first-item {
+    display:  none;
+}
+.post-type-wp_hr_privacy_policy tbody#the-list td:hover {
+    cursor: pointer;
+}
+.wphrgdpr_default_answer_title,.wphrgdpr_default_answer,.wphrgdpr_txtboxs_inner_textbox_default{
+    display: block;
+    margin-bottom: 15px;
+}
+.wphrgdpr_chk_selection ul{
+    list-style:disc;
+    padding-left:5px;
+}
+.wphrgdpr_default_title,.wp_hedefault_title_label{
+    display: block;
+   
+    
+}
+lable.wphrgdpr_default_answer{
+    color: #333;
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+    padding: 20px 40px;
+    background: white;
+    border: 1px solid #ccc;
+    font-size: 19px;
+    line-height: 1.6471;
+    vertical-align: baseline;
+    
+}
+
+.wphrgdpr_txtboxs_inner_textbox_default {
+    color: #333;
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+    padding: 15px 30px;
+    background: white;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    line-height: 1.6471;
+    vertical-align: baseline;
+    font-family: inherit;
+}
+lable.wphrgdpr_default_answer_title {
+    
+    margin-bottom: 0;
+    padding: 10px;
+    background: whitesmoke;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.wp_hedefault_title_label{
+    
+     margin-top: 10px;
+    padding: 10px;
+    background: whitesmoke;
+    font-size: 1em;
+     margin-bottom: 0;
+   cursor: text;  
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+label.wphrgdpr_default_title {
+   cursor: text;
+    padding: 8px 0px 8px 7px;
+    font-size: 1.7em;
+    line-height: 100%;
+    
+    
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+#wphr-gdpr-sar-modal table {
+    width: 100%;
+}
+
+#wphr-gdpr-sar-modal table th {
+    width: 200px;
+}
+
+#wphr-gdpr-sar-modal table th, #wphr-gdpr-sar-modal table td {
+    padding: 10px;
+    font-size: 16px;
+}
+.dataprotectiontraining th.column-number {
+    width: 75px;
+}
+table.accessrequest .column-ID {
+    width: 55px;
+}
+span.consent_status_partial {
+    color: #9e9e0d;
+    font-weight: 500;
+}
+
+span.consent_status_agreed {
+    color: green;
+    font-weight: 500;
+}
+
+span.consent_status_not_submitted {
+    font-weight: 500;
+    color: #840c0c;
+}
+
+span.consent_status_revoked {
+    font-weight: 500;
+    color: red;
+}
+/* 09 May 2018 */
+.subject_access_request_register_panel {
+    display: block;
+}
+
+.subject_access_request_register_panel > .section {
+    border: 1px solid #ccc;
+	background:#fff;
+    padding: 15px;
+    margin-bottom: 40px;
+}
+
+.subject_access_request_register_panel > .section h2 {
+    padding: 0 !important;
+    font-size: 16px !important;
+    font-weight:  700;
+    margin-bottom: 8px !important;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field {
+    width: calc(50% - 15px);
+    float:  left;
+    display: block;
+    position:  relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.subject_access_request_register_panel > .section .form_set:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+.subject_access_request_register_panel .section .form_set .form_field label {
+    width: 165px;
+    margin: 0;
+    float: left;
+    line-height: 28px;
+    padding-right: 15px;
+}
+
+.subject_access_request_register_panel .section .form_set .form_field input[type="text"], .subject_access_request_register_panel .section .form_set .form_field select, .subject_access_request_register_panel .section .form_set .form_field textarea {
+    width: 100%;
+    margin: 0;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    outline: none;
+    box-shadow: 0 0 0;
+    border: 1px solid #ccc;
+    max-width: 400px;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field:nth-child(odd) {
+    margin-right: 15px;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field:nth-child(even) {
+    margin-left: 15px;
+}
+
+
+
+.subject_access_request_register_panel > .section .form_set .form_field.dpo_manager_handler, .subject_access_request_register_panel > .section .form_set .form_field.appointed_date_handler {
+    width: calc(25% - 20px);
+}
+.subject_access_request_register_panel > .section .form_set .form_field.dpo_manager_handler label {
+	max-width: 150px;
+	line-height: 20px;
+	padding-top: 12px;
+	padding-bottom: 4px;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field.dpo_manager_handler label, .subject_access_request_register_panel > .section .form_set .form_field.dpo_manager_handler select, .subject_access_request_register_panel > .section .form_set .form_field.appointed_date_handler label, .subject_access_request_register_panel > .section .form_set .form_field.appointed_date_handler input[type="text"] {
+    display: block;
+    width: 100%;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field.appointed_date_handler + .form_field, .subject_access_request_register_panel > .section .form_set .form_field.expiry_date_handler {
+    width: calc(50% - 30px);
+    margin-left: 10px;
+}
+
+.subject_access_request_register_panel > .section .form_set {
+    position:  relative;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field.appointed_date_handler {
+    margin-right: 15px;
+}
+.subject_access_request_register_panel > .section .form_set .form_field.appointed_date_handler label {
+	padding-top: 28px;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field.full_width {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field.full_width input[type="text"] {
+    width: auto;
+    max-width: 400px;
+}
+.subject_access_request_register_panel > .section:nth-child(2) .form_set .form_field.full_width input[type="text"] {
+	width: 100%;
+}
+.subject_access_request_register_panel > .section .form_set .form_field.appointed_date_handler {
+    position:  relative;
+}
+.subject_access_request_register_panel > .section .form_set .form_field.expiry_date_handler input[type="text"] {
+    width: auto;
+    margin-right: 15px;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field.expiry_date_handler span.description {
+    vertical-align: middle;
+}
+.subject_access_request_register_panel > .section .form_set .form_field.appointed_date_handler input.date_mask {
+    width: auto;
+}
+.subject_access_request_register_panel > .section .form_set .form_field.full_width + .form_field, .subject_access_request_register_panel > .section .form_set .form_field.full_width + .form_field + div + .form_field {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.subject_access_request_register_panel .section .form_set .form_field label input[type="checkbox"] {margin-left: 30px;}
+
+.subject_access_request_register_panel > .section .form_set .form_field.full_width label, .subject_access_request_register_panel > .section .form_set .form_field.full_width label + textarea {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.subject_access_request_register_panel > .section .form_set .form_field.full_width span.description {
+    position:  initial;
+    margin-left: 15px;
+    vertical-align: sub;
+}
+
+.subject_access_request_register_panel > .section .form_set .form_field label[for="unfounded_request_date"], .subject_access_request_register_panel > .section .form_set .form_field label[for="requested_form_completion_date"], .subject_access_request_register_panel > .section .form_set .form_field label[for="unfounded_request_date"] + input, .subject_access_request_register_panel > .section .form_set .form_field label[for="requested_form_completion_date"] + input, .subject_access_request_register_panel > .section .form_set .form_field label[for="additional_info_date"] + input{
+    width: auto;
+}
+
+.subject_access_request_register_panel > .section:nth-child(2) .form_set .form_field.full_width label, .subject_access_request_register_panel > .section .form_set .form_field.full_width label[for="reviced_expiry_date"], .subject_access_request_register_panel > .section .form_set .form_field.full_width label[for="notified_date"] {
+    width: 165px;
+}
+.wphrgdpr_heading + div#poststuff {
+    padding-top: 0;
+}
+
+.wphrgdpr_heading + div#postdivrich {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.wphrgdpr_heading +  div#wp-single_model_answer-wrap {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+@media (max-width: 1366px) {
+    .subject_access_request_register_panel .section .form_set .form_field input[type="text"], .subject_access_request_register_panel .section .form_set .form_field select {
+        max-width: 278px;
+    }
+	.subject_access_request_register_panel > .section .form_set .form_field.expiry_date_handler input[type="text"] {
+		width: 130px;
+	}
+}
+.subject_access_request_register_panel .section .form_set .form_field label[for="idenitity_proof_1_verified"], .subject_access_request_register_panel .section .form_set .form_field label[for="idenitity_proof_2_verified"] {
+    padding-left: 15px;
+}
+.wphrgdpr_heading {
+    display: none;
+}
+
+.post-type-wp_hr_privacy_policy .wphrgdpr_heading {
+	display: block;
+	    font-size: 13px;
+	    color: #444;
+	    font-weight: 600;
+	    padding: 10px;
+	    border-left: 1px solid #ccc;
+	    border-right: 1px solid #ccc;
+	    border-top: 1px solid #ccc;
+	    margin-top: 20px;
+}
+#normal-sortables .wphrgdpr_heading {
+    background: whitesmoke;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 1.3;
+}
+#closedpostboxesnonce + .wphrgdpr_heading {
+    width: calc( 100% - 322px );
+}
